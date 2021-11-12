@@ -1,0 +1,43 @@
+﻿<Window x:Class="практическая_работа__2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:практическая_работа__2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="1000">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Заплнить" Click="Fill_button"></MenuItem>
+                <MenuItem Header="Рассчитать" Click="ResultOutput_ButtonClick"></MenuItem>
+                <MenuItem Header="Сохранить" Click="Save_Button" ></MenuItem>
+                <MenuItem Header="Загрузить" Click="Download_Button"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Выход" Click="Close_Button"></MenuItem>
+            <MenuItem Header="Информация" Click="Info_Button"></MenuItem>
+        </Menu>
+
+        <Button  x:Name="outputButton" Content="Рассчитать" HorizontalAlignment="Left" Margin="385,291,0,0" VerticalAlignment="Top" Width="75" Click="ResultOutput_ButtonClick"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Margin="385,338,0,0" VerticalAlignment="Top" Width="75" Click="Close_Button"/>
+        <Button Content="Информация" HorizontalAlignment="Left" Margin="281,338,0,0" VerticalAlignment="Top" Width="75" Click="Info_Button"/>
+        <DataGrid x:Name="numbersTable" HorizontalAlignment="Left" Height="204" Margin="10,18,0,0" VerticalAlignment="Top" Width="450"/>
+        <TextBox x:Name="sizeofarray" HorizontalAlignment="Left" Height="23" Margin="29,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Заполнить" HorizontalAlignment="Left" Margin="29,291,0,0" VerticalAlignment="Top" Click="Fill_button" Width="75"/>
+        <TextBox x:Name="resultOutput" HorizontalAlignment="Left" Height="23" Margin="340,245,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="121,338,0,0" VerticalAlignment="Top" Width="74" Click="Download_Button"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="30,338,0,0" VerticalAlignment="Top" Width="74" Click="Save_Button" RenderTransformOrigin="-3.509,-2.802"/>
+        <Label Content="Размер массива" HorizontalAlignment="Left" Margin="51,219,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="NumbersTable2" HorizontalAlignment="Left" Height="204" Margin="479,18,0,0" VerticalAlignment="Top" Width="505"/>
+        <TextBox x:Name="MatrixRows" HorizontalAlignment="Left" Height="23" Margin="507,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MatrixColumn" HorizontalAlignment="Left" Height="23" Margin="507,281,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Строки" HorizontalAlignment="Left" Margin="655,276,0,0" VerticalAlignment="Top"/>
+        <Label Content="Столбцы" HorizontalAlignment="Left" Margin="646,245,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.542,-0.374"/>
+        <Button Content="Заполнить" HorizontalAlignment="Left" Margin="507,323,0,0" Click="FillMatrix_button" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="MaxColumn" HorizontalAlignment="Left" Height="23" Margin="841,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="886,291,0,0" Click="MaxColumnNamber_button" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="762,343,0,0" Click="saveMatrix_button" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Загрузить" HorizontalAlignment="Left" Margin="856,343,0,0" Click="Loading_button" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
