@@ -34,7 +34,16 @@ namespace практическая_работа__2
             numbersTable.ItemsSource = null;
             numbersTable.Items.Clear();
             numbersTable.Columns.Clear();
-            EditOperations.FillMas(Convert.ToInt32(sizeofarray.Text), out generatedArray);
+            try
+            {
+
+
+                EditOperations.FillMas(Convert.ToInt32(sizeofarray.Text), out generatedArray);
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка");
+            }
             DataRow row = res.NewRow();
 
             for (int i = 0; i < generatedArray.Length; i++)
@@ -51,8 +60,11 @@ namespace практическая_работа__2
 
         private void ResultOutput_ButtonClick(object sender, RoutedEventArgs e)
         {
+
+
             Practice.CosOfSum(generatedArray, out double result);
             resultOutput.Text = Convert.ToString(result);
+
 
         }
 
@@ -100,7 +112,14 @@ namespace практическая_работа__2
             NumbersTable2.ItemsSource = null;
             NumbersTable2.Items.Clear();
             NumbersTable2.Columns.Clear();
-            generatedMatrix = Matrixs.FillMatrix(Convert.ToInt32(MatrixRows.Text), Convert.ToInt32(MatrixColumn.Text));
+            try
+            {
+                generatedMatrix = Matrixs.FillMatrix(Convert.ToInt32(MatrixRows.Text), Convert.ToInt32(MatrixColumn.Text));
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка");
+            }
 
             for (int i = 0; i < generatedMatrix.GetLength(1); i++)
             {
@@ -112,7 +131,7 @@ namespace практическая_работа__2
                 DataRow row = res.NewRow();
                 for (int j = 0; j < generatedMatrix.GetLength(1); j++)
                 {
-                    row[j] = generatedMatrix[i,j];
+                    row[j] = generatedMatrix[i, j];
                 }
                 res.Rows.Add(row);
             }
